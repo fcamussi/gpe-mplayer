@@ -12,6 +12,7 @@ Frontend para el reproductor de audio y video MPlayer
 
 * gcc
 * GTK+ 2
+* mplayer
 
 ## Compilación
 
