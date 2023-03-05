@@ -136,8 +136,8 @@ void Control_Play()
 	gint inputfd, outputfd, errorfd;
 	GString *line = g_string_new(NULL); 
 
-	g_string_printf(line, "/usr/bin/mplayer -slave -quiet -mixer-channel vol -ac mad "
-					"-osdlevel 0 -wid %d -vo x11 -zoom", Window_Get_MPlayer_Window_ID());
+	g_string_printf(line, "/usr/bin/mplayer -slave -quiet -mixer-channel vol "
+					"-osdlevel 0 -wid %d", Window_Get_MPlayer_Window_ID());
 	gchar **argv = g_strsplit(line->str, " ", 0);
 	gint n = g_strv_length(argv);
 	gchar **tmp = g_memdup(argv, n * sizeof(gchar *)); 
